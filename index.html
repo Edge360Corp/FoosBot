@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Foosbot2</title>
+
+    <link rel="stylesheet" href="css/core.css" />
+    <script src="js/libs/angular.js"></script>
+    <!-- <script src="js/libs/angular-route.min.js"></script>
+    <script src="js/libs/angular-resource.min.js"></script> -->
+</head>
+<body ng-app>
+<!-- ="appFoos"> -->
+<div> <!-- ng-controller="test"> -->
+    <table>
+        <tr><th></th><th>Blue</th><th>Red</th></tr>
+        <tr><td>Offense</td>
+            <td><input type="text" ng-model="BlueOff" placeholder="Player name.."</td>
+            <td><input type="text" ng-model="RedOff" placeholder="Offensive Player name.."</td>
+        </tr>
+        <tr><td>Defense</td>
+            <td><input type="text" ng-model="BlueDef" placeholder="Defensive Player name.."</td>
+            <td><input type="text" ng-model="RedDef" placeholder="Player name.."</td>
+        </tr>
+    </table><br>
+    <div class="content" ng-init="blueScore=0; redScore=0">
+<!--        <div><span><input type="button">{{BlueDef}}</input></span></div> -->
+        <div >
+            <span id="blueDef"><button class="plusOne" ng-click="blueScore = blueScore + 1">{{BlueDef}}</button></span>
+            <span id="blueOff"><button class="plusOne" ng-click="blueScore = blueScore + 1">{{BlueOff}}</button></span>
+        </div>
+        <div id="display">
+            <span id="scoreBlue" class="score">{{blueScore}}</span>
+            <img id="table" src="img/foosball.png" />
+            <span id="scoreRed" class="score">{{redScore}}</span>
+        </div>
+        <div> <!-- ng-init="redScore=0">-->
+            <span id="redOff"><button class="plusOne" ng-click="redScore = redScore + 1">{{RedOff}}</button></span>
+            <span id="redDef"><button class="plusOne" ng-click="redScore = redScore + 1">{{RedDef}}</button></span>
+         </div>
+    </div>
+</div>
+<table edge-stats>
+    <tr><th>This table based directive should have an auto generated table of </th></tr>
+    <tr><td>every stat imaginable wins, losses, pts, pts as def, pts as offense, errors, </td></tr>
+    <tr><td>Pts in 1v1, pts against each opposing player, pts allowed by each opposing player</td></tr>
+    <tr><td>compiled as soon as a name entered matches a database field and kept up to date with games' data</td></tr>
+    <tr><td>spin faults and dead balls</td></tr>
+</table>
+</body>
+</html>

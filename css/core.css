@@ -1,0 +1,35 @@
+
+body
+{
+    background-color: #444444;
+    color: #4488FF;
+    align-items: center;
+}
+
+.score
+{
+    font-size: 72pt;
+    font-weight: bold;
+}
+
+#table
+{
+    vertical: center;
+}
+
+button#blueDef
+{
+    position: relative;
+    left: 50px;
+}
+
+button#blueOff
+{
+    position: absolute;
+    left: 150px;
+}
+button.plusOne
+{
+    min-width: 75px;
+    min-height: 35px;
+}
